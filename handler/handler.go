@@ -117,7 +117,7 @@ func FileMetaUpdateHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	curFileMeta := meta.GetFileMeta(fileSha1)
-	curFileMEta.FileName = newFileName
+	curFileMeta.FileName = newFileName
 	meta.UpdateFileMeta(curFileMeta)
 
 	data, err := json.Marshal(curFileMeta)
